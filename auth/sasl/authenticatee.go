@@ -80,6 +80,7 @@ func init() {
 			tpid := upid.UPID{
 				ID:   process.Label(),
 				Host: parent.Host,
+				Port: "0",
 			}
 			return messenger.NewHttpWithBindingAddress(tpid, BindingAddressFrom(ctx))
 		})
